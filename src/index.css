@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    background-color: white;
+
+    color: black;
+}
+
+/* Default Layout  */
+.defaultContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header  */
+.headerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 2px solid black;
+}
+
+.header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: centers;
+
+    min-width: 400px;
+    width: 100%;
+    max-width: 1200px;
+
+    background-color: white;
+
+}
+
+/* Logo Container  */
+.logoContainer {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Search Bar  */
+.searchBarContainer {
+    width: 60%;
+    height: 25px;
+    padding: 10px 10px 5px 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid black;
+}
+
+.searchBar {
+    width: 80%;
+
+    border: none;
+}
+
+.searchBar:focus {
+    box-shadow: 0 0 0 0;
+
+    outline: 0;
+}
+
+.searchButton {
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+
+    align-self: flex-end;
+}
+
+/* User Info  */
+.userInfoContainer {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.userLinksContainer {
+    width: 100%;
+    height: 40px;
+    margin-top: -10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.userLinksContainer a {
+    text-decoration: none;
+    color: black
+}
+
+
+.userLinksContainer a:hover {
+    text-decoration: underline;
+    color: black
+}
+
+.buttonLogin {
+    width: 80px;
+    height: 40px;
+    border: 2px solid #f82d22;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonLogin:hover {
+    background-color: #f82d22;
+    color: white;
+    transition: 500ms;
+}
+
+
+/* Not Found  */
+.notFoundContainer {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFoundTitle {
+    font-weight: 400;
+
+    color:gray;
+}
