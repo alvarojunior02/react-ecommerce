@@ -11,7 +11,7 @@ export default function DefaultLayout() {
     const {user, token} = useStateContext();
     const [searchBar, setSearchBar] = useState("");
 
-    if (token && user.role === "admin") {
+    if (token && user.roles[0].name === "admin") {
         return <Navigate to="/dashboard" />
     }
 
@@ -53,9 +53,9 @@ export default function DefaultLayout() {
                             )
                             : (
                                 <div className="userLinksContainer">
-                                    <button className="buttonLogin">
+                                    <a href="/login"  className="buttonLogin">
                                         <p>Logar</p>
-                                    </button>
+                                    </a>
                                 </div>
                             )
                         }

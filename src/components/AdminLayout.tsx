@@ -4,7 +4,7 @@ import { useStateContext } from "../contexts/ContextProvider"
 export default function AdminLayout() {
     const {user, token} = useStateContext();
 
-    if (!token || user.role !== "admin") {
+    if (!token || user.roles[0].name !== "admin") {
         return <Navigate to="/home" />
     }
 
