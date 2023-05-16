@@ -32,7 +32,7 @@ export default function Login() {
     return (
         <div className="container">
             <header className="headerLogin">
-                <h1 className="title">Login - Laravel E-Commerce</h1>
+                <h1 className="title">Logar - Laravel E-Commerce</h1>
             </header>
 
             <div className="containerLogin">
@@ -62,9 +62,11 @@ export default function Login() {
                         />
                     </div>
 
-                    <button className="buttonLoginSubmit" onClick={() => { handleSubmit()}}>
+                    <button className="buttonSubmit" onClick={() => { handleSubmit()}}>
                         <p>Logar</p>
                     </button>
+
+                    <p>Ainda não tem conta? <a href="singup">Crie sua Conta</a></p>
                 </div>
             </div>
         </div>
