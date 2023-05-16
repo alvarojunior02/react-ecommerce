@@ -61,7 +61,7 @@
     border: 1px solid black;
 }
 
-.buttonLoginSubmit {
+.buttonSubmit {
     margin-top: 10px;
 
     background-color: transparent;
@@ -79,7 +79,7 @@
     align-items: center;
 }
 
-.buttonLoginSubmit:hover {
+.buttonSubmit:hover {
     background-color: #f82d22;
     color: white;
 
