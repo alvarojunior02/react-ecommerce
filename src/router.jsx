@@ -4,6 +4,7 @@ import NotFound from "./views/NotFound";
 import DefaultLayout from "./components/DefaultLayout";
 import AdminLayout from "./components/AdminLayout";
 import Login from "./views/Login";
+import Singup from "./views/Singup";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     {
         path: '/login',
         element: <Login />
+    },
+    {
+        path: '/singup',
+        element: <Singup />
     },
     {
         path: '/dashboard',
