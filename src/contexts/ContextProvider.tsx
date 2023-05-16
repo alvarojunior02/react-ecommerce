@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { createContext, useContext, useState } from "react";
 import IUser from "../interfaces/IUser";
+import Cookies from 'universal-cookie';
 
 const StateContext = createContext({
     user: {
@@ -20,15 +21,26 @@ const StateContext = createContext({
 })
 
 export const ContextProvider = ({children}) => {
-    const [user, setUser] = useState<IUser>();
-    const [token, _setToken] = useState(localStorage.getItem('ACESS_TOKEN'));
+    const cookies = new Cookies();
+
+    const [user, _setUser] = useState<IUser>(cookies.get('USER'));
+    const [token, _setToken] = useState(cookies.get('ACCESS_TOKEN'));
 
     const setToken = (token) => {
         _setToken(token);
         if (token) {
-            localStorage.setItem('ACCESS_TOKEN', token);
+            cookies.set('ACCESS_TOKEN', token);
         } else {
-            localStorage.removeItem('ACESS_TOKEN');
+            cookies.remove('ACCESS_TOKEN');
+        }
+    }
+
+    const setUser = (user) => {
+        _setUser(user);
+        if (user) {
+            cookies.set('USER', user);
+        } else {
+            cookies.remove('USER');
         }
     }
 
