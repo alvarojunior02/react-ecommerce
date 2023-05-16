@@ -24,7 +24,7 @@ export default function Singup() {
                 password: password
             }
     
-            axios.post("http://127.0.0.1:8000/api/singup", dataSingup)
+            axios.post("http://127.0.0.1:8000/api/signup", dataSingup)
                 .then(response => {
                     setUser(response.data.user);
                     setToken(response.data.token);
@@ -99,7 +99,7 @@ export default function Singup() {
                         <p>Criar Conta</p>
                     </button>
 
-                    <p className="formLoginFooter">Ja tem uma conta? <a href="/login">Realize login</a></p>
+                    <p>Ja tem uma conta? <a href="/login">Realize login</a></p>
                 </div>
             </div>
         </div>
