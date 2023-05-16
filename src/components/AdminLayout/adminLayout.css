@@ -1,0 +1,28 @@
+.container-admin {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    margin: 0;
+
+    width: 200px;
+    height: 100%;
+
+    background-color: #FF564D;
+    color: white;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-list-link {
+    text-decoration: none;
+    color: white;
+}
+
+.lisidebar-list-linknk:hover {
+    text-decoration: underline;
+}
